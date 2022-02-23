@@ -52,6 +52,10 @@ class _ScanPageState extends State<ScanPage> {
       barcode != null ? 'Result: ${barcode!.code}' :
       'Scan a code:',
       maxLines: 3,
+      style: TextStyle(
+        color: Colors.white,
+        fontSize: 30
+      ),
     );
   }
 
