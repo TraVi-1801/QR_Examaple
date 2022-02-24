@@ -29,6 +29,10 @@ class _GeneratePage extends State<GeneratePage> {
                 data: controller.text,
                 size: 200.0,
                 backgroundColor: Colors.white,
+                // embeddedImage: AssetImage('assets/images/doan.jpeg'),
+                // embeddedImageStyle: QrEmbeddedImageStyle(
+                //   size: Size(40,40),
+                // ),
               ),
               SizedBox(height: 40,),
               buildTextField(context),

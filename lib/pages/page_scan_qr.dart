@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
+import 'user.dart';
+
 class ScanPage extends StatefulWidget {
   const ScanPage({Key? key}) : super(key: key);
 
@@ -42,21 +44,22 @@ class _ScanPageState extends State<ScanPage> {
         children: <Widget>[
           buildQrview(context),
           Positioned(bottom:10,child:  buildResult(),),
+
         ],
       ),
     ));
   }
 
   Widget buildResult() {
-    return Text(
-      barcode != null ? 'Result: ${barcode!.code}' :
-      'Scan a code:',
-      maxLines: 3,
-      style: TextStyle(
-        color: Colors.white,
-        fontSize: 30
-      ),
-    );
+      return Text(
+        barcode != null ? 'Check in success' :
+        'Scan a code:',
+        maxLines: 3,
+        style: TextStyle(
+            color: Colors.white,
+            fontSize: 30
+        ),
+      );
   }
 
   Widget buildQrview(BuildContext context) {
